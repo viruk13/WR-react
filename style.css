@@ -59,11 +59,14 @@ h2 {
   transform: translateY(-8px);
 }
 
+/* WHY WINDREVIEW IMAGES – SAME SIZE */
 .value-card img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 220px;      /* SAME HEIGHT for all 3 images */
+  object-fit: cover; /* Crop image, no stretch */
+  display: block;
 }
+
 
 .value-card h3 {
   color: #1abc9c;
