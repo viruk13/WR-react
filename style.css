@@ -92,3 +92,9 @@
     flex: 1 1 100%;
   }
 }
+.service-card img {
+  width: 100%;        /* image fills card width */
+  height: 150px;      /* set the desired height */
+  object-fit: cover;  /* keeps image aspect ratio, crops if needed */
+  border-radius: 10px; /* optional rounded corners */
+}
