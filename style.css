@@ -1,111 +1,156 @@
-/* ==========================
-   GENERAL STYLING
-========================== */
-body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: #f5f7fa;
-  color: #1b2633;
+/* =====================
+   RESET & BASE
+===================== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+  color: #1b2633;
   line-height: 1.6;
 }
 
-/* ==========================
-   CORE SERVICES SECTION
-========================== */
-.core-services {
+/* =====================
+   SHARED STYLES
+===================== */
+section {
   padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-  background: #f8f9fb; /* light background */
 }
 
-.core-services h2 {
+h2 {
   text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1b2633;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-.core-services .subtitle {
+.subtitle {
   text-align: center;
-  color: #4a5866;
-  font-size: 1rem;
+  font-size: 16px;
+  color: #5a6b7b;
   margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ==========================
-   CARDS GRID
-========================== */
-.services-grid {
+/* =====================
+   WHY WINDREVIEW
+===================== */
+.value-section {
+  background: #ffffff;
+}
+
+.value-grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ==========================
-   INDIVIDUAL CARD
-========================== */
-.service-card {
-  flex: 1 1 calc(33.333% - 30px); /* 3 per row */
+.value-card {
   background: #ffffff;
-  border-radius: 12px;
+  width: 360px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
   text-align: center;
-  padding: 20px 15px 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+.value-card img {
+  width: 100%;
+  height: 220px;           /* SAME SIZE */
+  object-fit: cover;
+}
+
+.value-card h3 {
+  font-size: 18px;
+  color: #1abc9c;
+  margin: 20px 15px 10px;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: #555;
+  padding: 0 20px 25px;
+}
+
+/* =====================
+   CORE SERVICES
+===================== */
+.core-services {
+  background: #f8f9fb;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* ==========================
-   CARD IMAGE
-========================== */
-.service-card img {
-  width: 100%;         /* full width of card */
-  height: 180px;       /* all images same height */
-  object-fit: cover;   /* maintain aspect ratio */
-  border-radius: 10px; /* rounded corners */
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
+/* ICON STYLE */
+.service-card i {
+  background: #e6f7f2;
+  color: #1abc9c;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
-.service-card:hover img {
-  transform: scale(1.05); /* slight zoom on hover like WindReview */
-}
-
-/* ==========================
-   CARD TITLE & TEXT
-========================== */
 .service-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 18px;
+  color: #1b2633;
   margin-bottom: 10px;
-  color: #1abc9c; /* WindReview green */
 }
 
 .service-card p {
-  font-size: 0.95rem;
-  color: #4a5866;
-  line-height: 1.5;
+  font-size: 14px;
+  color: #555;
 }
 
-/* ==========================
+/* =====================
    RESPONSIVE
-========================== */
-@media (max-width: 1024px) {
-  .service-card {
-    flex: 1 1 48%; /* 2 per row on tablet */
+===================== */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .service-card {
-    flex: 1 1 100%; /* 1 per row on mobile */
+  .value-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
