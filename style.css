@@ -93,8 +93,10 @@
   }
 }
 .service-card img {
-  width: 100%;        /* image fills card width */
-  height: 150px;      /* set the desired height */
-  object-fit: cover;  /* keeps image aspect ratio, crops if needed */
-  border-radius: 10px; /* optional rounded corners */
+  width: 100%;         /* full width of card */
+  height: 180px;       /* same height as first image */
+  object-fit: cover;   /* crops if needed, keeps aspect ratio */
+  border-radius: 10px; /* rounded corners like WindReview */
+  margin-bottom: 15px; /* spacing below image */
 }
+
