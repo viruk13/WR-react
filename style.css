@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +5,13 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
   color: #1b2633;
   background: #f4f6f9;
   line-height: 1.6;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -32,7 +32,7 @@ body {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: #1abc9c;
 }
@@ -42,6 +42,7 @@ body {
   text-decoration: none;
   color: #1b2633;
   font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .nav a:hover {
@@ -57,6 +58,7 @@ h2 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .subtitle {
@@ -64,9 +66,10 @@ h2 {
   color: #5a6b7b;
   max-width: 700px;
   margin: 0 auto 50px;
+  font-size: 16px;
 }
 
-/* WHY */
+/* WHY GRID */
 .why {
   background: #fff;
 }
@@ -85,6 +88,12 @@ h2 {
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .why-card img {
@@ -96,22 +105,24 @@ h2 {
 .why-card h3 {
   color: #1abc9c;
   margin: 20px 15px 10px;
+  font-size: 20px;
 }
 
 .why-card p {
   font-size: 14px;
   color: #555;
   padding: 0 20px 25px;
+  line-height: 1.5;
 }
 
-/* SERVICES */
+/* CORE SERVICES GRID */
 .services {
   background: #f8f9fb;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
@@ -121,6 +132,12 @@ h2 {
   border-radius: 14px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .service-card i {
@@ -134,15 +151,14 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* FOOTER BASE STYLING */
+/* FOOTER */
 .footer {
-  background: #1b2633;  /* dark background */
-  color: #cbd5e1;       /* light text */
+  background: #1b2633;
+  color: #cbd5e1;
   padding: 60px 0 20px;
   font-size: 14px;
 }
 
-/* GRID LAYOUT */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -151,24 +167,21 @@ h2 {
   margin: auto;
 }
 
-/* HEADINGS */
 .footer h4 {
-  color: #1abc9c;  /* WindReview green */
+  color: #1abc9c;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-/* LINKS */
 .footer a {
   color: #cbd5e1;
   text-decoration: none;
 }
 
 .footer a:hover {
-  color: #1abc9c; /* hover color */
+  color: #1abc9c;
 }
 
-/* SOCIAL ICONS */
 .social-link {
   display: inline-block;
   margin-right: 12px;
@@ -178,14 +191,27 @@ h2 {
 }
 
 .social-link:hover {
-  color: #1abc9c;         /* Green hover */
-  transform: translateY(-3px); /* Slight lift */
+  color: #1abc9c;
+  transform: translateY(-3px);
 }
 
-/* COPYRIGHT */
 footer .copyright {
   text-align: center;
   margin-top: 40px;
   font-size: 13px;
   color: #9aa6b2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .why-grid, .services-grid, .footer-grid {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
 }
