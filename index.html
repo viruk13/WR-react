@@ -1,198 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WindReview</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container nav">
-    <div class="logo">WindReview</div>
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">WindReview</div>
 
-    <!-- Hamburger for mobile -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars"></i>
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#solutions">Solutions</a>
+
+        <!-- Resources Dropdown -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">
+            Resources <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="#faqs">FAQs</a>
+            <a href="#support">Support</a>
+          </div>
+        </div>
+
+        <!-- Products Dropdown -->
+        <div class="dropdown">
+          <a href="#products" class="dropbtn" onclick="toggleDropdown(event)">
+            Our Products <i class="fa-solid fa-caret-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="#inspecta">Inspecta</a>
+            <a href="#idrones">i-Drones Inspection</a>
+            <a href="#netra">Netra Crawler Inspection</a>
+            <a href="#service">Service and Repair</a>
+          </div>
+        </div>
+
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <nav id="navbar">
-      <a href="#home">Home</a>
-      <a href="#solutions">Solutions</a>
+  <!-- HOME SECTION -->
+  <section id="home" class="home">
+    <div class="container">
+      <h1>Welcome to WindReview</h1>
+      <p>Delivering reliable, end-to-end solutions for wind energy assets worldwide.</p>
+    </div>
+  </section>
 
-      <!-- Resources Dropdown -->
-      <div class="dropdown">
-        <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Resources <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="#faqs">FAQs</a>
-          <a href="#support">Support</a>
-        </div>
-      </div>
-
-      <!-- Products Dropdown -->
-      <div class="dropdown">
-        <a href="#products" class="dropbtn" onclick="toggleDropdown(event)">Our Products <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="#inspecta">Inspecta</a>
-          <a href="#idrones">i-Drones Inspection</a>
-          <a href="#netra">Netra Crawler Inspection</a>
-          <a href="#service">Service and Repair</a>
-        </div>
-      </div>
-
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- WHY WINDREVIEW -->
-<section id="why" class="why">
-  <div class="container">
-    <h2>Why WindReview</h2>
-    <p class="subtitle">
-      Delivering reliable, end-to-end solutions for wind energy assets worldwide.
-    </p>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <img src="https://cdn.pixabay.com/photo/2020/02/18/11/18/pinwheel-4859176_1280.jpg" alt="Complete Solutions" />
+  <!-- SOLUTIONS SECTION -->
+  <section id="solutions" class="value-section">
+    <h2>Solutions</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <img src="https://cdn.pixabay.com/photo/2020/02/18/11/18/pinwheel-4859176_1280.jpg" alt="Complete Solutions">
         <h3>Complete Solutions for Wind Turbines</h3>
-        <p>Full lifecycle services from inspection to repair.</p>
+        <p>Comprehensive solutions from inspection to repair and maintenance.</p>
       </div>
-
-      <div class="why-card">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.a324a3j20DcdL8mamK2MqgHaEo" alt="Single Point Contact" />
+      <div class="value-card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.a324a3j20DcdL8mamK2MqgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Single Point Contact">
         <h3>Single Point Contact – Wind Turbines</h3>
-        <p>One trusted partner for all turbine services.</p>
+        <p>One reliable partner for all turbine-related services.</p>
       </div>
-
-      <div class="why-card">
-        <img src="https://th.bing.com/th/id/OIP.HvoxEpOP6KGUmc21dUPe0AHaDT" alt="Committed Service" />
+      <div class="value-card">
+        <img src="https://th.bing.com/th/id/OIP.HvoxEpOP6KGUmc21dUPe0AHaDT?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Committed to Service">
         <h3>Committed to Best Service</h3>
-        <p>Expert teams focused on safety and quality.</p>
+        <p>Highest standards of service, safety, and performance.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CORE SERVICES -->
-<section id="core" class="services">
-  <div class="container">
+  <!-- CORE SERVICES SECTION -->
+  <section id="core" class="core-services">
     <h2>Core Services</h2>
-    <p class="subtitle">
-      Expert solutions covering every aspect of wind turbine operations.
-    </p>
-
     <div class="services-grid">
       <div class="service-card">
-        <i class="fa-solid fa-industry"></i>
+        <i class="fas fa-industry fa-3x"></i>
         <h3>Industry-Leading Expertise</h3>
-        <p>Global wind energy experience.</p>
+        <p>Decades of experience delivering high-quality wind turbine inspections.</p>
       </div>
-
       <div class="service-card">
-        <i class="fa-solid fa-helmet-safety"></i>
+        <i class="fas fa-helmet-safety fa-3x"></i>
         <h3>Safety-First Operations</h3>
-        <p>Strict safety standards on every site.</p>
+        <p>Strict safety standards ensuring reduced risk and full compliance.</p>
       </div>
-
       <div class="service-card">
-        <i class="fa-solid fa-wrench"></i>
+        <i class="fas fa-wrench fa-3x"></i>
         <h3>Reliable Repairs</h3>
-        <p>Fast, efficient turbine repair solutions.</p>
+        <p>Fast, efficient repair solutions to minimize downtime.</p>
       </div>
-
       <div class="service-card">
-        <i class="fa-solid fa-drone"></i>
+        <i class="fas fa-drone fa-3x"></i>
         <h3>Advanced Inspections</h3>
-        <p>High-resolution drone inspections.</p>
+        <p>High-resolution aerial inspections for blades and towers.</p>
       </div>
-
       <div class="service-card">
-        <i class="fa-solid fa-microchip"></i>
+        <i class="fas fa-microchip fa-3x"></i>
         <h3>Smart Technology</h3>
-        <p>AI-driven analytics and tools.</p>
+        <p>AI-driven analytics for precise decision-making.</p>
       </div>
-
       <div class="service-card">
-        <i class="fa-solid fa-users"></i>
+        <i class="fas fa-users fa-3x"></i>
         <h3>Skilled Team</h3>
-        <p>Certified technicians worldwide.</p>
+        <p>Certified technicians trained for harsh environments.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PRODUCTS SECTION -->
-<section id="products" class="products">
-  <div class="container">
+  <!-- PRODUCTS SECTION -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
     <div class="products-grid">
       <div class="product-card" id="inspecta">
-        <img src="https://picsum.photos/400/220?random=10" alt="Inspecta" />
         <h3>Inspecta</h3>
-        <p>Wind Turbines solutions for inspection and monitoring.</p>
       </div>
-
       <div class="product-card" id="idrones">
-        <img src="https://picsum.photos/400/220?random=11" alt="i-Drones Inspection" />
         <h3>i-Drones Inspection</h3>
-        <p>Drone-based Wind Turbines inspections for precision.</p>
       </div>
-
       <div class="product-card" id="netra">
-        <img src="https://picsum.photos/400/220?random=12" alt="Netra Crawler Inspection" />
         <h3>Netra Crawler Inspection</h3>
-        <p>Robotic crawler inspections for Wind Turbines blades and towers.</p>
       </div>
-
       <div class="product-card" id="service">
-        <img src="https://picsum.photos/400/220?random=13" alt="Service and Repair" />
         <h3>Service and Repair</h3>
-        <p>Comprehensive maintenance and repair solutions for Wind Turbines.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer id="contact" class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>WindReview</h4>
-      <p>Global partner for wind turbine services.</p>
+  <!-- RESOURCES SECTIONS -->
+  <section id="faqs" class="resources">
+    <h2>FAQs</h2>
+    <p>Common questions answered about our services and products.</p>
+  </section>
+
+  <section id="support" class="resources">
+    <h2>Support</h2>
+    <p>Contact our support team for help or inquiries.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container footer">
+      <p>&copy; 2026 WindReview | All Rights Reserved</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
     </div>
+  </footer>
 
-    <div>
-      <h4>Contact</h4>
-      <p>Email: <a href="mailto:info@windreview.com">info@windreview.com</a></p>
-      <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
-    </div>
+  <!-- JS for dropdown & mobile menu -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
 
-    <div>
-      <h4>Follow</h4>
-      <a href="https://www.linkedin.com" target="_blank" class="social-link">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://twitter.com" target="_blank" class="social-link">
-        <i class="fa-brands fa-twitter"></i>
-      </a>
-      <a href="https://www.facebook.com" target="_blank" class="social-link">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-    </div>
-  </div>
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const dropdown = event.currentTarget.parentElement;
+      dropdown.classList.toggle('show');
+    }
 
-  <p class="copyright">
-    © 2026 WindReview. All rights reserved.
-  </p>
-</footer>
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(d => d.classList.remove('show'));
+      }
+    }
+  </script>
 
 </body>
 </html>
