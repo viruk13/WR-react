@@ -1,111 +1,76 @@
-/* ==========================
-   GENERAL STYLING
-========================== */
-body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: #f5f7fa;
-  color: #1b2633;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+/* RESET */
+* {
+  box-sizing: border-box;
 }
 
-/* ==========================
-   CORE SERVICES SECTION
-========================== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+}
+
+/* SECTION */
 .core-services {
   padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
-  background: #f8f9fb; /* light background */
 }
 
 .core-services h2 {
   text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1b2633;
-  margin-bottom: 10px;
-}
-
-.core-services .subtitle {
-  text-align: center;
-  color: #4a5866;
-  font-size: 1rem;
+  font-size: 36px;
   margin-bottom: 50px;
+  color: #1b2633;
 }
 
-/* ==========================
-   CARDS GRID
-========================== */
+/* GRID */
 .services-grid {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* ==========================
-   INDIVIDUAL CARD
-========================== */
+/* CARD */
 .service-card {
-  flex: 1 1 calc(33.333% - 30px); /* 3 per row */
   background: #ffffff;
+  width: 350px;
   border-radius: 12px;
   text-align: center;
-  padding: 20px 15px 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-  transition: all 0.3s ease;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
 }
 
-/* ==========================
-   CARD IMAGE
-========================== */
+/* IMAGE — THIS IS THE KEY */
 .service-card img {
-  width: 100%;         /* full width of card */
-  height: 180px;       /* all images same height */
-  object-fit: cover;   /* maintain aspect ratio */
-  border-radius: 10px; /* rounded corners */
+  width: 100%;
+  height: 180px;          /* 🔥 SAME SIZE FOR ALL */
+  object-fit: cover;      /* 🔥 NO STRETCH */
+  border-radius: 10px;
   margin-bottom: 15px;
-  transition: transform 0.3s ease;
 }
 
-.service-card:hover img {
-  transform: scale(1.05); /* slight zoom on hover like WindReview */
-}
-
-/* ==========================
-   CARD TITLE & TEXT
-========================== */
+/* TEXT */
 .service-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  color: #1abc9c;
+  font-size: 18px;
   margin-bottom: 10px;
-  color: #1abc9c; /* WindReview green */
 }
 
 .service-card p {
-  font-size: 0.95rem;
-  color: #4a5866;
+  font-size: 14px;
+  color: #555;
   line-height: 1.5;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
-@media (max-width: 1024px) {
-  .service-card {
-    flex: 1 1 48%; /* 2 per row on tablet */
-  }
-}
-
+/* MOBILE */
 @media (max-width: 768px) {
   .service-card {
-    flex: 1 1 100%; /* 1 per row on mobile */
+    width: 100%;
   }
 }
