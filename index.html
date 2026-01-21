@@ -17,13 +17,28 @@
 <header class="header">
   <div class="container nav">
     <div class="logo">WindReview</div>
-    <nav>
-      <a href="">Solutions</a>
-      <a href="#core">Core Services</a>
 
-      <!-- Dropdown -->
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+      <a href="#home">Home</a>
+      <a href="#solutions">Solutions</a>
+
+      <!-- Resources Dropdown -->
       <div class="dropdown">
-        <a href="#products" class="dropbtn">Our Products <i class="fa-solid fa-caret-down"></i></a>
+        <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Resources <i class="fa-solid fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#faqs">FAQs</a>
+          <a href="#support">Support</a>
+        </div>
+      </div>
+
+      <!-- Products Dropdown -->
+      <div class="dropdown">
+        <a href="#products" class="dropbtn" onclick="toggleDropdown(event)">Our Products <i class="fa-solid fa-caret-down"></i></a>
         <div class="dropdown-content">
           <a href="#inspecta">Inspecta</a>
           <a href="#idrones">i-Drones Inspection</a>
