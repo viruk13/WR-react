@@ -1,7 +1,5 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Arial', sans-serif; color:#1b2633; background:#f4f6f9; line-height:1.6; }
-
-/* CONTAINER */
 .container { max-width:1200px; margin:auto; padding:0 20px; }
 
 /* HEADER */
