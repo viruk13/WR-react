@@ -3,11 +3,45 @@ body { font-family: 'Arial', sans-serif; color:#1b2633; background:#f4f6f9; line
 .container { max-width:1200px; margin:auto; padding:0 20px; }
 
 /* HEADER */
-.header { background:#fff; border-bottom:1px solid #e5e9ef; }
+.header { background:#fff; border-bottom:1px solid #e5e9ef; position:sticky; top:0; z-index:999; }
 .nav { height:70px; display:flex; justify-content:space-between; align-items:center; }
 .logo { font-size:26px; font-weight:bold; color:#1abc9c; }
-.nav a { margin-left:25px; text-decoration:none; color:#1b2633; font-weight:500; transition:0.3s ease; }
-.nav a:hover { color:#1abc9c; }
+
+/* Navbar Links */
+nav { display:flex; align-items:center; gap:20px; position:relative; }
+nav a { text-decoration:none; color:#1b2633; font-weight:500; transition:0.3s ease; }
+nav a:hover { color:#1abc9c; }
+
+/* Dropdown */
+.dropdown { position:relative; display:inline-block; }
+.dropbtn { text-decoration:none; color:#1b2633; font-weight:500; transition:0.3s; cursor:pointer; }
+.dropbtn i { margin-left:5px; }
+.dropdown:hover .dropbtn { color:#1abc9c; }
+
+.dropdown-content {
+  display:none;
+  position:absolute;
+  background-color:#fff;
+  min-width:200px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.15);
+  border-radius:6px;
+  overflow:hidden;
+  top:100%;
+  left:0;
+  z-index:100;
+}
+
+.dropdown-content a {
+  color:#1b2633;
+  padding:12px 16px;
+  text-decoration:none;
+  display:block;
+  font-weight:500;
+  transition:0.2s;
+}
+
+.dropdown-content a:hover { background-color:#1abc9c; color:#fff; }
+.dropdown:hover .dropdown-content { display:block; }
 
 /* SECTIONS */
 section { padding:80px 0; }
