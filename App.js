@@ -12,8 +12,8 @@ function App() {
           />
           <h3>Complete Solutions for Wind Turbines</h3>
           <p>
-            End-to-end wind turbine solutions covering inspection,
-            maintenance, and repairs.
+            End-to-end solutions covering inspection, maintenance, and repair
+            services for wind turbines.
           </p>
         </div>
 
@@ -24,8 +24,8 @@ function App() {
           />
           <h3>Single Point Contact – Wind Turbines</h3>
           <p>
-            One reliable partner managing all turbine services with
-            efficiency and accountability.
+            One trusted partner handling all turbine operations with efficiency
+            and accountability.
           </p>
         </div>
 
@@ -36,8 +36,8 @@ function App() {
           />
           <h3>Committed to Best Service</h3>
           <p>
-            Skilled technicians delivering safe, high-quality service
-            in all conditions.
+            Highly trained technicians delivering safe, reliable, and high-
+            quality services.
           </p>
         </div>
 
